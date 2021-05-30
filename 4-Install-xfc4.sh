@@ -11,12 +11,13 @@ fi;;
 
 echo "<--	INSTALANDO GESTOR DE PANTALLA DE INICIO	-->"
 
-if pacman -Qi lightdm lightdm-gtk-greeter lighdm-greeter-settings &> /dev/null; then
-	echo "<--	Gestor de inicio ya esta instalado	-->";
+if pacman -Qi lightdm lightdm-gtk-greeter lighdm-gtk-greeter-settings &> /dev/null; then
+	clear
+	echo "<--	Gestor de inicio ya esta instalado	-->"
 else
-	sudo pacman -Sy --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-greeter-settings;
+	sudo pacman -Sy --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 	sudo systemctl enable lightdm
 
 	echo "<--	Gestor de inicio instalado correctamente	-->"
 	echo "<--	Favor de reiniciar con el comando 'sudo reboot'	-->"
-fi;;
+fi
