@@ -21,7 +21,7 @@ case $opcion in
 		else
 			clear;
 			echo "<---	Instalando driver INTEL	--->";
-			sudo pacman -S --needed --noconfirm xf86-video-intel;
+			sudo pacman -S --needed --noconfirm xorg xf86-video-intel;
 		fi; exit;;
 	2)
 		if pacman -Qi xf86-video-ati &> /dev/null; then
@@ -29,7 +29,7 @@ case $opcion in
 		else
 			clear;
 			echo "<---	Instalando driver AMD/ATI	--->";
-			sudo pacman -S --needed --noconfirm xf86-video-ati;
+			sudo pacman -S --needed --noconfirm xorg xf86-video-ati;
 		fi; exit;;
 	3)
 		if pacman -Qi xf86-video-noveau &> /dev/null; then
@@ -37,7 +37,7 @@ case $opcion in
 		else
 			clear;
 			echo "<---	Instalando driver NVIDIA	--->";
-			sudo pacman -S --needed --noconfirm xf86-video-noveau;
+			sudo pacman -S --needed --noconfirm xorg xf86-video-noveau;
 		fi; exit;;
 	4)
 		if pacman -Qi virtualbox-guest-utils &> /dev/null; then
@@ -45,7 +45,7 @@ case $opcion in
 		else
 			clear;
 			echo "<---	Instalando VirtualBox Guest Utils	--->";
-			sudo pacman -S --needed --noconfirm virtualbox-guest-utils;
+			sudo pacman -S --needed --noconfirm xorg virtualbox-guest-utils;
 			sudo systemctl enable vboxservice
 		fi; exit;;
 	5)

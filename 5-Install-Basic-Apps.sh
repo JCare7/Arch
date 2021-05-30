@@ -2,7 +2,7 @@
 
 echo "<--	INSTALANDO ALGUNAS APLICACIONES BASICAS	-->"
 
-red=networkmanager network-manager-applet 
+red='networkmanager network-manager-applet' 
 
 # Aplicacion de Red
 if sudo pacman -Sy --needed --noconfirm $red &> /dev/null; then
